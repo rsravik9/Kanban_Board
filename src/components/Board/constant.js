@@ -10,7 +10,7 @@ export const mapData = [
                 tasks: [],
                 labels: [{ text: 'FrontEnd', color: 'blue' }],
                 description: 'This is FrontEnd Description',
-                date: ''
+                date: new Date().toLocaleDateString()
             },
 
             {
@@ -19,7 +19,7 @@ export const mapData = [
                 tasks: [],
                 labels: [{ text: 'BackEnd', color: 'brown' }],
                 description: 'This is BackEnd Description',
-                date: ''
+                date: new Date().toLocaleDateString()
             },
 
             {
@@ -28,7 +28,7 @@ export const mapData = [
                 tasks: [],
                 labels: [{ text: 'FrontEnd', color: 'blue' }],
                 description: 'This is FrontEnd Description',
-                date: ''
+                date: new Date().toLocaleDateString()
             },
 
             {
@@ -37,7 +37,7 @@ export const mapData = [
                 tasks: [],
                 labels: [{ text: 'BackEnd', color: 'brown' }],
                 description: 'This is BackEnd Description',
-                date: ''
+                date: new Date().toLocaleDateString()
             },
 
 

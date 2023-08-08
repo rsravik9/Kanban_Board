@@ -6,7 +6,7 @@ import DropDown from '../DropDown/DropDown';
 
 
 function Card(props) {
-    const { cardData, removeCards, boardId, handleDragEnd, handleDragEnter } = props;
+    const { cardData, removeCards, boardId, handleDragEnd, handleDragEnter, boardText } = props;
     const [showDropDown, setShowDropDown] = useState(false)
 
     return (
@@ -17,13 +17,6 @@ function Card(props) {
         >
             {/* Ta achive draggable functionality */}
             <div className='card_top'>
-                <div className='board_top_lables'>
-                    {
-                        cardData.labels.map((ev, index) => (
-                            <Chips key={index} text={ev.text} pColor={ev.color} />
-                        ))
-                    }
-                </div>
                 <div
                     className='card_top_more'
                     style={{ position: 'relative', cursor: 'pointer' }}
@@ -41,11 +34,25 @@ function Card(props) {
                 </div>
             </div>
             <div className='card_title'>
+                <b>{cardData.date}</b>
+            </div>
+            <div className='card_title'>
                 {cardData.title}
             </div>
+            <div className='card_title'>
+                {cardData.description}
+            </div>
             <div className='card_footer'>
-                {cardData.date && <p> <Clock /> {cardData.date}</p>}
-                <p> <CheckSquare /> 1/4</p>
+
+                <div className='board_top_lables'>
+                    {
+                        // cardData.labels.map((ev, index) => (
+                            <Chips text={boardText} pColor={'#F7B0BB'} />
+                        // ))
+                    }
+                </div>
+                {cardData.labels.length && <p> <Clock /></p>}
+                <p> &nbsp;&nbsp;<CheckSquare /></p>
             </div>
         </div>
     )
