@@ -14,9 +14,11 @@
   flex: 1;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   font-weight: bold;
   /* gap: 5px; */
+  border-radius: 20px;
+  border-bottom: 2px solid rgb(232, 107, 107);
 }
 
 .board_top_title span {
